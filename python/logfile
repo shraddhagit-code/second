@@ -1,0 +1,16 @@
+#logging module import
+import logging
+
+#creating n configriing logger
+logging.basicConfig(filename="logtestout.log",
+                    format='%(asctime)s %(message)s',filemode='w')
+
+logger=logging.getLogger()
+
+logger.setLevel(logging.DEBUG)
+
+logger.debug("harmless debug Message")
+logger.info("Just an information")
+logger.warning("Its a Warning")
+logger.error("Did you try to divide by zero")
+logger.critical("Internet is down")
